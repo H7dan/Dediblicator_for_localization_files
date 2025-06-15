@@ -1,10 +1,10 @@
 import os
 
-
+# Prompts the user to enter a search value (e.g., a string to find in YAML files)
 def get_search_value():
     return input("Enter value to search: ").strip()
 
-
+# Searches through all .yaml files in the parent directory for keys that match the given value
 def find_value_in_yamls(target_value):
     found_keys = set()
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -25,7 +25,7 @@ def find_value_in_yamls(target_value):
                 print(f"Error reading {filename}: {str(e)}")
     return found_keys
 
-
+# Main function: asks user for a value and prints matching keys found in YAML files
 def main():
     target = get_search_value()
     unique_keys = find_value_in_yamls(target)
@@ -36,7 +36,6 @@ def main():
         print(f"\nFound {len(unique_keys)} key(s):")
         for key in sorted(unique_keys):
             print(f"- {key}")
-
 
 if __name__ == "__main__":
     main()
