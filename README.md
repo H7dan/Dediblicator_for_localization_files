@@ -57,3 +57,11 @@ A technical support module used by `yaml_deduplicator.py` to **gather and store 
 2. Run the script you need:
    - `yaml_deduplicator.py` for full deduplication and reporting.
    - `finder.py` for checking if a value already exists before adding.
+
+
+
+
+
+teasting 
+try to add reviewer in pull request 
+я вспомнил что нужно добавить тех папку с видом как будет выглядеьб рез работы кода
